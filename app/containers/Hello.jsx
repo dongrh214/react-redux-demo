@@ -15,9 +15,9 @@ class Hello extends React.Component {
                 <p>hello world</p>
                 <br/>
                 <br/>
-                <Name userinfo={this.props.userinfo}/>
+                <Name name={this.props.name}/>
                 <hr/>
-                <Age userinfo={this.props.userinfo}/>
+                <Age age={this.props.age}/>
                 <hr/>
                 <Button title="修改姓名" action={this.props.userinfoActions.updateName}/>
                 <Button title="修改年龄" action={this.props.userinfoActions.updateAge}/>
@@ -25,12 +25,16 @@ class Hello extends React.Component {
         )
     }
     componentDidMount() {
+        console.log(this.props)
     }
 }
 
 function mapStateToProps(state) {
+
+    console.log('state:',state);
     return {
-        userinfo: state.userinfo
+        name: state.personName.name,
+        age: state.personAge.age
     }
 }
 
