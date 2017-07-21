@@ -1,11 +1,11 @@
 import React from 'react'
 
-class B extends React.Component {
+class Age extends React.Component {
     render() {
         return (
-            <p>{this.props.userinfo.age}</p>
+            <p>年龄：{this.props.userinfo.age}</p>
         )
     }
 }
 
-export default B
+export default Age

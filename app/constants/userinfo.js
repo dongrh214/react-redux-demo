@@ -1,2 +1,2 @@
-export const USERINFO_LOGIN = 'USERINFO_LOGIN'
-export const UPDATE_CITYNAME = 'UPDATE_CITYNAME'
+export const UPDATE_NAME = 'UPDATE_NAME';
+export const UPDATE_AGE = 'UPDATE_AGE';

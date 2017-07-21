@@ -4,30 +4,27 @@ import { bindActionCreators } from 'redux'
 
 import * as userinfoActions from '../actions/userinfo'
 
-import A from '../components/Name'
-import B from '../components/Age'
-import C from '../components/Button'
+import Name from '../components/Name'
+import Age from '../components/Age'
+import Button from '../components/Button'
 
 class Hello extends React.Component {
     render() {
         return (
             <div>
                 <p>hello world</p>
+                <br/>
+                <br/>
+                <Name userinfo={this.props.userinfo}/>
                 <hr/>
-                <A userinfo={this.props.userinfo}/>
+                <Age userinfo={this.props.userinfo}/>
                 <hr/>
-                <B userinfo={this.props.userinfo}/>
-                <hr/>
-                <C actions={this.props.userinfoActions}/>
+                <Button title="修改姓名" action={this.props.userinfoActions.updateName}/>
+                <Button title="修改年龄" action={this.props.userinfoActions.updateAge}/>
             </div>
         )
     }
     componentDidMount() {
-        // 模拟登陆
-        this.props.userinfoActions.login({
-            name: 'zhangsan',
-            age: '22'
-        })
     }
 }
 

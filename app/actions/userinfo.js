@@ -1,15 +1,15 @@
 import * as actionTypes from '../constants/userinfo'
 
-export function login(data) {
+export function updateName(data) {
     return {
-        type: actionTypes.USERINFO_LOGIN,
+        type: actionTypes.UPDATE_NAME,
         data
     }
 }
 
-export function updateCityName(data) {
+export function updateAge(data) {
     return {
-        type: actionTypes.UPDATE_CITYNAME,
+        type: actionTypes.UPDATE_AGE,
         data
     }
 }

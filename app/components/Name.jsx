@@ -1,13 +1,13 @@
 import React from 'react'
 
-class A extends React.Component {
+class Name extends React.Component {
     render() {
         return (
-            <p>{this.props.userinfo.name}</p>
+            <p>姓名：{this.props.userinfo.name}</p>
         )
     }
 }
 
 
 
-export default A
+export default Name
